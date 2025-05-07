@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('Home.png'); /* Replace with the path to your background image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .login-container {
+      background-color: rgba(223, 177, 211, 0.5); /* Adjust the opacity if needed */
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 250px; /* Set a maximum width for the login box */
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      margin-right: 44%; /* Adjust the margin to create space between the box and the bottom */
+    }
+
+    .login-container h1 {
+      margin-bottom: 20px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .login-container button {
+      background-color: #0f3460;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="loginForm" onsubmit="redirectToPage(event)">
+      <input type="text" id="username" name="username" placeholder="Username" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function redirectToPage(event) {
+      event.preventDefault(); // Prevents the default form submission behavior
+
+      // You can perform authentication here and then redirect to the desired page
+      // For simplicity, let's assume the login is always successful
+      window.location.href = "secondpage.html"; // Replace with the desired page URL
+    }
+  </script>
+</body>
+</html>
